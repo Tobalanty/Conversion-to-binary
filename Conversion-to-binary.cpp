@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-const int n{ 8 };
+const int n{ 64 };
 
 int inputInteger() {                                                                    //Ввод
 
@@ -15,7 +15,6 @@ bool conversionForPositive(int a) {                                             
 
     return !(a % 2 == 0);
 }
-
 
 void output(int a) {
 
@@ -80,11 +79,20 @@ void output(int a) {
 int main()
 {
 
-    int a = inputInteger();
+
+    long long a = inputInteger();
+    
+
+   /*if (!isdigit(a)) {
+        std::cout << "The entered value isn't a number\n";                        
+        return 1;
+    }*/
 
     std::cout << "\n";
 
+    std::cout << "Your number in binary: ";
     output(a);
+    std::cout << "\n";
 
     system("pause");
     return 0;
